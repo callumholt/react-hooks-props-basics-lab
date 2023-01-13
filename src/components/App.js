@@ -11,10 +11,25 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home city={user.city} name={user.name}/>
+      <About bio={user.bio} github={user.links.github} linkedin={user.links.linkedin}/>
     </div>
   );
 }
 
 export default App;
+
+/*
+const user = {
+  name: "Liza",
+  city: "New York",
+  bio: "I made this!",
+  color: "firebrick",
+  links: {
+    github: "https://github.com/liza",
+    linkedin: "https://www.linkedin.com/in/liza/",
+  },
+};
+
+export default user;
+*/
